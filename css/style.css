@@ -204,6 +204,12 @@ form{
     margin: 10px;
     padding: 20px;
 }
+.btnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #contact-box label{
     font-size: 1.3rem;
     /* font-family: "Bree Serif", serif; */
