@@ -244,7 +244,7 @@ footer{
     display: block;
     margin-top: 12px;
     padding: 12px;
-    margin-left: 85%;
+    right: 10px;
     width: 120px;
     font-family: 'Baloo Bhai';
     position: fixed;
@@ -256,7 +256,7 @@ footer{
     margin-top: 70px;
     padding: 5px;
     width: 55px;
-    margin-left: 90%;
+    right: 10px;
     position: fixed;
 }
 
