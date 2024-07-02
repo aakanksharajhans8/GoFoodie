@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Picker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 571px)" href="css/phone.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Baloo Bhai' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div id="logo">
+            <img src="images/GoFoodie.png" alt="GoFoodie.com">
+        <div id="logo_content">
+            <p>GoFoodie.com</p>
+            <p>THE SEARCH IS OVER.</p>
+        </div>
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Recipe Picker</a></li>
+            <li class="item"><a href="#random-recipe">Random Recipe</a></li>
+            <li class="item">
+            <select id="cuisine-select" name="cuisine-select" href="#recipe-by-cuisine"></select>
+            </li>
+        </ul>
+        <div class="social-media">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagramm.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebookk.png" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="images/youtubee.png" alt="YouTube">
+            </a>
+            <div id="search">
+                <img src="images/searchh.png" alt="search" >
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to GoFoodie.com</h1>
+        <h2>A food recipe engine</h2>
+        <p>You can’t decide between thousands of recipes available? Answer few questions and let us do the work! </p>
+        <button class="btn" id="start">Start Now</button>
+    </section>
+
+    <div id="questionnaire" style="display: none">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <input type="text" id="extra-input" placeholder="Your answer here" style="display: none">
+        <button class="btn" id="next">Next</button>
+    </div>
+
+    <section id="kaamKiCheez" style="display: none">
+        <p id="name">NAME</p>
+        <p id="description">DESCRIPTION</p>
+        <div class="box">
+            <div class="container">
+                <h4>Ingredients:</h4>
+                <ul id="kaamKiCheezIngredientList"></ul>
+            </div>
+            <div class="container">
+                <h4>Procedure:</h4>
+                <ul id="kaamKiCheezProcedureList"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="kaamKiCheezELSE" style="display: none">
+        <p id="namee">NAME</p>
+        <p id="descriptionn">DESCRIPTION</p>
+        <div class="box">
+            <div class="container">
+                <h4>Ingredients:</h4>
+                <ul id="kaamKiCheezIngredientListELSE"></ul>
+            </div>
+            <div class="container">
+                <h4>Procedure:</h4>
+                <ul id="kaamKiCheezProcedureListELSE"></ul>
+            </div>
+        </div>
+    </section> -->
+    <hr>
+
+    <section id="random-recipe" class="section">
+        <h2>Random Recipe</h2>
+        <button id="fetch-random-recipe">Fetch Random Recipe</button>
+        <div class="bigBox" style="display: none">
+            <p id="random_name">NAME</p>
+            <p id="random_description">DESCRIPTION</p>
+            <div class="box">
+                <div class="container">
+                    <h4>Ingredients:</h4>
+                    <ul id="randomIngredientList"></ul>
+                </div>
+                <div class="container">
+                    <h4>Procedure:</h4>
+                    <ul id="randomProcedureList"></ul>
+                </div>
+            </div>
+    </section>
+
+    <hr>
+
+    <section id="recipe-by-cuisine" class="section">
+        <h2>Recipe by Cuisine</h2>
+        <p>Recipes of cuisine you choose will appear here!</p>
+        <div class="bigBox" style="display: none">
+            <p id="cuisine_name">NAME</p>
+            <p id="cuisine_description">DESCRIPTION</p>
+            <div class="box">
+                <div class="container">
+                <h4>Ingredients:</h4>
+                <ul id="cuisineIngredientList"></ul>
+            </div>
+            <div class="container">
+                <h4>Procedure:</h4>
+                <ul id="cuisineProcedureList"></ul>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="recipe-by-search" class="section">
+        <h2>Recipe by Search</h2>
+        <p>Recipes you search for will appear here!</p>
+        <div class="bigBox" style="display: none">
+            <p id="search_name">NAME</p>
+            <p id="search_description">DESCRIPTION</p>
+            <div class="box">
+                <div class="container">
+                    <h4>Ingredients:</h4>
+                    <ul id="ingredientList"></ul>
+                </div>
+                <div class="container">
+                    <h4>Procedure:</h4>
+                    <ul id="procedureList"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your  name">
+                
+                <label for="phone">Phone No.</label>
+                <input type="phone" name="phone" id="phone" placeholder="Enter your  Phone Number">
+                
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your  Email">
+                
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Message for us?"></textarea>
+                
+            </form>
+        </div>
+
+    </section>
+
+    <footer class="center">
+        Copyright &copy; www.myOnlineMeal.com All rights reserved
+    </footer>
+    <!-- <script src="myapp.js"></script> -->
+    <script type="module" src="myapp.js"></script>
+</body>
+
+</html>
