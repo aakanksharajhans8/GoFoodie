@@ -248,6 +248,7 @@ footer{
     width: 120px;
     font-family: 'Baloo Bhai';
     position: fixed;
+    z-index: 5;
 }
 
 #submit_button {
